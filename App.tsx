@@ -91,8 +91,8 @@ export default function App() {
   return (
     <PaperProvider>
       <View style={styles.container}>
-        <Text style={styles.Title}>Mere Brazier</Text>
-        
+        <Text style={styles.Title}>Christoffel's Barne</Text>
+        <View  style= {styles.inputsAndDropDownForBorder}>
         <TextInput
           placeholder="Dish Name"
           value={name}
@@ -144,7 +144,8 @@ export default function App() {
 
         <TouchableOpacity onPress={addDish} style={styles.box}>
           <Text style={styles.addButtonText}>Add Dish</Text>
-        </TouchableOpacity> 
+        </TouchableOpacity>
+        </View> 
 
         <StatusBar style="auto" />
 
@@ -185,11 +186,12 @@ const styles = StyleSheet.create({
     borderRadius: 25, 
     padding: 4.2, 
     marginBottom: 20,
-    height: 55,
-    width: 150,
+    height: 45,
+    width: 200,
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: '800',
+    margin: 22
   },
   addButtonText: {
     color: 'white',
@@ -224,24 +226,26 @@ const styles = StyleSheet.create({
   },
   input: { 
     fontFamily: 'georgia',
-    height: 40, 
+    height: 15, 
     borderColor: 'gray', 
     borderWidth: 1, 
     marginBottom: 5, 
     width: 200, 
-    paddingLeft: 10, 
+    paddingLeft: 5, 
     borderRadius: 15, 
     boxSizing: 'content-box',
     paddingRight: 10,
     backgroundColor: 'white',
   },
   dropdownButton: {
-    width: 200,
+    width: 160,
     marginBottom: 5,
     borderColor: 'gray',
     borderRadius: 15,
     fontFamily: 'georgia',  
     backgroundColor: 'white',
+    height: 35,
+    fontSize:3.2
   },
   dropdownButtonContent: {
     justifyContent: 'space-between',
@@ -262,7 +266,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   Title: {
-    fontSize: 50,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'georgia',
@@ -274,7 +278,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 3,
     borderRadius: 10,
-    padding: 5,
+    padding: 50,
     backgroundColor: '#7178ce33',
+  
   },
+   inputsAndDropDownForBorder:{
+    margin: 20,
+    paddingInline: 5,
+    backgroundColor: '#eef2f5cb',
+    alignItems: "center",
+    height:330,
+    borderRadius: 20,
+shadowOffset: {
+  width: 5,
+  height: 6,
+},
+shadowOpacity:  0.21,
+shadowRadius: 6.65,
+elevation: 9
+
+   },
+   
 });
