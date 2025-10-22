@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, TextInput, FlatList } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, TextInput, FlatList } from 'react-native'; // (The IIE, 2025)
 import { useState } from "react";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationContainer } from "@react-navigation/native";
@@ -8,12 +8,12 @@ import React from 'react';
 import { Picker } from '@react-native-picker/picker';
 
 //components for the menu  for the course selection
-import { RadioButton, Menu, Button, Provider as PaperProvider } from 'react-native-paper';
+import { RadioButton, Menu, Button, Provider as PaperProvider } from 'react-native-paper'; // (The IIE, 2025)
 // This allow for the use of gradients 
 import { LinearGradient } from 'expo-linear-gradient';
 
 //The array and the attributes which it houses 
-let Dish = ({ id, name, description, price, course, onDelete }: {
+let Dish = ({ id, name, description, price, course, onDelete }: {// (The IIE, 2025)
   id: string;
   name: string;
   description: string;
@@ -22,6 +22,7 @@ let Dish = ({ id, name, description, price, course, onDelete }: {
   onDelete: () => void;
 }) => (
   // what will be shown in the flat list/ array
+  // (The IIE, 2025)
   <SafeAreaView > 
     <View style = {styles.itemBox} >
       <Text>{name}</Text>
@@ -35,7 +36,7 @@ let Dish = ({ id, name, description, price, course, onDelete }: {
   </SafeAreaView> 
 );
 
-export default function App() {
+export default function App() { // (The IIE, 2025)
   //Presen Array items 
   const [dishes, setDishes] = useState([
     { id: '1', name: 'Spaghetti', description: 'Delicious spaghetti with marinara sauce', price: 12.99, course: 'Main' },
@@ -51,7 +52,7 @@ export default function App() {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [course, setCourse] = useState('');
-  const [courseSelections, setCourseSelections] = useState<string[]>([]);
+  const [courseSelections, setCourseSelections] = useState<string[]>([]);//(W3Schools, 2025)
   const [menuVisible, setMenuVisible] = useState(false);
 
   // Course options
@@ -73,7 +74,7 @@ export default function App() {
     }
   };
 
-  const addDish = () => {
+  const addDish = () => { // (The IIE, 2025)
     //iteration is increase the id number everytime and item is entered 
     if (!name || !description || !price || !course) return; // Simple validation
     const newDish = {
@@ -92,14 +93,14 @@ export default function App() {
     setCourse('');
   };
 // allow the delete button to not only delete the id but also delete the items associated with the id
-  const deleteDish = (id: string) => {
+  const deleteDish = (id: string) => {// (The IIE, 2025)
     setDishes(dishes.filter(dish => dish.id !== id));
   };
 
   return (
     //Essential for the making of the menua
     <PaperProvider>
-      <LinearGradient
+      <LinearGradient //(W3Schools, 2025)
           colors={['#1c2f4a','#e8e3d9', '#c8102e']}
       style={styles.container}
       start={{ x: 0, y: 1 }}
@@ -132,24 +133,24 @@ export default function App() {
         
         
         {/* Dropdown Menu for Course Selection */}
-        <Menu
+        <Menu //(W3Schools, 2025)
         // this is when the button is inactive
-          visible={menuVisible}
+          visible={menuVisible}// (The IIE, 2025)
           onDismiss={() => setMenuVisible(false)}
           anchor={
-            <Button 
+            <Button //(W3Schools, 2025)
               mode="outlined" 
               onPress={() => setMenuVisible(true)}
               style={styles.dropdownButton}
               contentStyle={styles.dropdownButtonContent}
             >
-              {course || 'Select Course'}
+              {course || 'Select Course'} 
             </Button>
           }
           style={styles.menu}
         >
           {courseOptions.map((courseOption, index) => (
-            <Menu.Item
+            <Menu.Item //(W3Schools, 2025) 
               key={courseOption}
               onPress={() => handleSelection(courseOption)}
               title={courseOption}
@@ -159,7 +160,7 @@ export default function App() {
           ))}
         </Menu>
 
-        <TouchableOpacity onPress={addDish} style={styles.box}>
+        <TouchableOpacity onPress={addDish} style={styles.box}>// (The IIE, 2025)
           <Text style={styles.addButtonText}>Add Dish</Text>
         </TouchableOpacity>
         </View> 
@@ -191,7 +192,7 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // (The IIE, 2025)
   container: {
     flex: 1,
     backgroundColor: '#4ecbeb7e',
