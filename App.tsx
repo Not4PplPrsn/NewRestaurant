@@ -6,9 +6,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from 'react';
 import { Picker } from '@react-native-picker/picker';
+
+//components for the menu  for the course selection
 import { RadioButton, Menu, Button, Provider as PaperProvider } from 'react-native-paper';
+// This allow for the use of gradients 
 import { LinearGradient } from 'expo-linear-gradient';
 
+//The array and the attributes which it houses 
 let Dish = ({ id, name, description, price, course, onDelete }: {
   id: string;
   name: string;
@@ -17,10 +21,11 @@ let Dish = ({ id, name, description, price, course, onDelete }: {
   course: string;
   onDelete: () => void;
 }) => (
+  // what will be shown in the flat list/ array
   <SafeAreaView > 
     <View style = {styles.itemBox} >
       <Text>{name}</Text>
-      <Text>{description}</Text>
+      <Text style={{borderWidth:0, backgroundColor:'#ffff', borderRadius:3.5, flexWrap:'wrap', padding:5, width:196, marginTop:5.8, marginBottom:5.8, fontSize:10}}>{description}</Text>
       <Text>{price}</Text>
       <Text> {course}</Text>
       <TouchableOpacity onPress={onDelete} style={styles.deletButton} >
@@ -31,6 +36,7 @@ let Dish = ({ id, name, description, price, course, onDelete }: {
 );
 
 export default function App() {
+  //Presen Array items 
   const [dishes, setDishes] = useState([
     { id: '1', name: 'Spaghetti', description: 'Delicious spaghetti with marinara sauce', price: 12.99, course: 'Main' },
     { id: '2', name: 'Caesar Salad', description: 'Crisp romaine lettuce with Caesar dressing', price: 8.99, course: 'Appetizer' },
@@ -68,6 +74,7 @@ export default function App() {
   };
 
   const addDish = () => {
+    //iteration is increase the id number everytime and item is entered 
     if (!name || !description || !price || !course) return; // Simple validation
     const newDish = {
       id: (dishes.length + 1).toString(),
@@ -84,12 +91,13 @@ export default function App() {
     setPrice('');
     setCourse('');
   };
-
+// allow the delete button to not only delete the id but also delete the items associated with the id
   const deleteDish = (id: string) => {
     setDishes(dishes.filter(dish => dish.id !== id));
   };
 
   return (
+    //Essential for the making of the menua
     <PaperProvider>
       <LinearGradient
           colors={['#1c2f4a','#e8e3d9', '#c8102e']}
@@ -122,10 +130,10 @@ export default function App() {
           style={styles.input}
         />
         
-        <Text style={{ marginBottom: 6, fontFamily: 'georgia' }}>Course</Text>
         
         {/* Dropdown Menu for Course Selection */}
         <Menu
+        // this is when the button is inactive
           visible={menuVisible}
           onDismiss={() => setMenuVisible(false)}
           anchor={
@@ -159,8 +167,9 @@ export default function App() {
         <StatusBar style="auto" />
 
         <ScrollView>  
-          <View style={{ justifyContent: 'space-between' }}> 
+          <View style={{ justifyContent: 'space-between', padding:2 }}> 
             <FlatList
+            style={{flexWrap:'wrap'}}
               data={dishes}
               keyExtractor={(item) => item.id}
               renderItem={({ item }) => (
@@ -189,7 +198,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'georgia',
-    padding: 20,
+    padding:30,
   },
   box: {
     backgroundColor: '#115f9eff',
@@ -220,19 +229,21 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignItems: 'baseline',
     fontSize: 10,
-    alignContent: 'flex-start'
+    
   },
   itemBox: {
-    borderWidth: 0.5,
+    borderWidth: 0,
     borderRadius: 15, 
-    backgroundColor: '#a49de431',
-    padding: 15,
+    backgroundColor: '#2c93d8ff',
+    paddingTop: 10,
+    paddingBottom:10,
+    paddingLeft:6.5,
     shadowColor: "#570e0eff",
     flexWrap: 'wrap',
     boxSizing: 'border-box',
     justifyContent: 'space-between',
     marginBottom: 10,
-    width: 300,
+    width: 260,
   },
   input: { 
     fontFamily: 'georgia',
@@ -310,5 +321,5 @@ shadowRadius: 6.65,
 elevation: 9
 
    },
-   
+
 });
