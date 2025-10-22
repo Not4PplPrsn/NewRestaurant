@@ -11,7 +11,8 @@
 5.  Description 
 - Made the description box white so that the user is more easily draw to th content and separate the description from  the rest of the item attributes.
 ## Links 
-1. GithubLink [https://github.com/VCNMB-HAM/vcnmb-mast5112-2025-poe-Not4PplPrsn.git]
+1. GithubLink [https://github.com/VCNMB-HAM/vcnmb-mast5112-2025-poe-Not4PplPrsn.git] & [https://github.com/Not4PplPrsn/NewRestaurant.git]
+
 2. Youtube Link [https://youtube.com/shorts/mr0Ck3cftyU]
 
 ## References 
