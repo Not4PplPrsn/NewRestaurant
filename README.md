@@ -12,7 +12,7 @@
 - Made the description box white so that the user is more easily draw to th content and separate the description from  the rest of the item attributes.
 ## Links 
 1. GithubLink [https://github.com/VCNMB-HAM/vcnmb-mast5112-2025-poe-Not4PplPrsn.git]
-2. Youtube Link []
+2. Youtube Link [https://youtube.com/shorts/mr0Ck3cftyU]
 
 ## References 
  1. The IIE, 2025. MAST5112MM.docx [WWW Document]. URL https://advtechonline.sharepoint.com/:w:/r/sites/TertiaryStudents/_layouts/15/Doc.aspx?sourcedoc=%7BC4AAF478-96AC-4469-8005-F7CDC4A15EBB%7D&file=MAST5112MM.docx&action=default&mobileredirect=true (accessed 10.22.25).
