@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from 'react';
 import { Picker } from '@react-native-picker/picker';
 import { RadioButton, Menu, Button, Provider as PaperProvider } from 'react-native-paper';
+import { LinearGradient } from 'expo-linear-gradient';
 
 let Dish = ({ id, name, description, price, course, onDelete }: {
   id: string;
@@ -90,6 +91,14 @@ export default function App() {
 
   return (
     <PaperProvider>
+      <LinearGradient
+          colors={['#1c2f4a','#e8e3d9', '#c8102e']}
+      style={styles.container}
+      start={{ x: 0, y: 1 }}
+      end={{ x: 1, y: 0 }}
+      >
+        
+      
       <View style={styles.container}>
         <Text style={styles.Title}>Christoffel's Barne</Text>
         <View  style= {styles.inputsAndDropDownForBorder}>
@@ -168,6 +177,7 @@ export default function App() {
           </View>
         </ScrollView>
       </View>
+      </LinearGradient>
     </PaperProvider>
   );
 }
@@ -175,7 +185,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1c2f4a7e',
+    backgroundColor: '#4ecbeb7e',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'georgia',
@@ -239,13 +249,13 @@ const styles = StyleSheet.create({
   },
   dropdownButton: {
     width: 160,
-    marginBottom: 5,
+    marginBottom: 10,
     borderColor: 'gray',
     borderRadius: 15,
     fontFamily: 'georgia',  
     backgroundColor: 'white',
-    height: 35,
-    fontSize:3.2
+    height: 45.8,
+    fontSize:15
   },
   dropdownButtonContent: {
     justifyContent: 'space-between',
@@ -284,11 +294,13 @@ const styles = StyleSheet.create({
   },
    inputsAndDropDownForBorder:{
     margin: 20,
-    paddingInline: 5,
+    paddingInline: 10,
     backgroundColor: '#eef2f5cb',
     alignItems: "center",
     height:330,
     borderRadius: 20,
+    paddingTop: 20,
+    paddingBottom:20,
 shadowOffset: {
   width: 5,
   height: 6,
