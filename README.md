@@ -1,7 +1,7 @@
 # The app for  Chef Christoffel
 ## Design conciderations
 1.  Colour Scheme
- I chose the color red, cream and blue as they were the easiest for me to pick and chose to use them a gradient as it woul much much more visually engaging.
+ I chose the color red, cream and blue as they were the easiest for me to pick and chose to use them a gradient as it would be much much more visually engaging.
 2.  The buttons and inputs
  - For the button I chose not to use border, as the shadow already made the view look enticing added another dark element to it would over stimulate the user.
  - The input however, I used borders for so that the user can  more easily notice the inputs and they need.
