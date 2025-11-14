@@ -72,7 +72,7 @@ I stored the styling of the bottom navigation separately as the nav bar reverted
 ## Links 
 1. GithubLink [https://github.com/VCNMB-HAM/vcnmb-mast5112-2025-poe-Not4PplPrsn.git] & [https://github.com/Not4PplPrsn/NewRestaurant.git]
 
-2. Youtube Link [https://youtube.com/shorts/mr0Ck3cftyU]
+2. Youtube Link [https://youtu.be/qRzxTb4grgc]
 
 ## References 
   Expo, 2025. Authentication in Expo Router. [online] Expo Documentation. Available at: <https://docs.expo.dev/router/advanced/authentication/> [Accessed 5 November 2025].
